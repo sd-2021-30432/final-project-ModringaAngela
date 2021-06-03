@@ -1,0 +1,27 @@
+<html>
+    <div>
+        <div class = "titleM">Account {{account.counter}}</div>
+        <div class = "attributes">
+
+            <p>Bank: {{account.bankName}}</p>
+            <p>Type: {{account.type}}<p>
+            <p>Balance: {{account.balance}}</p>
+
+        </div>
+
+        <div class = "operations">
+            <p>
+                <button (click) = seeDeposits(account) class = "buttonView">Access Deposits</button>
+            </p>
+            <p>
+                <button (click) = seeDeposits(account) class = "buttonView">See cards associated</button>
+            </p>
+            <p>
+                <button (click) = seeDeposits(account) class = "buttonView">Make a transfer</button>
+            </p>
+            <p>
+                <button (click) = seeDeposits(account) class = "buttonView">Pay bills</button>
+            </p>
+        </div>
+    </div>
+</html>

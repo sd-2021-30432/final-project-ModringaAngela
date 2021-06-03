@@ -1,0 +1,29 @@
+
+<html>
+    <div>
+        <div class = "titleM">Welcome back, {{client.firstName}}  {{client.lastName}}!</div>
+        <div class = "attributes">
+ 
+            <p class = "tab"><b>ACCOUNTS</b></p>
+            <table class = "table table-hover width">
+                <thead>
+                <tr>
+                    <th>Account</th>
+                    <th>Bank name</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor ="let account of accounts">
+                    <td>{{account.counter}}</td>
+                    <td>{{account.bankName}}</td>
+                    <td>
+                        <button (click) = viewAccount(account) class= "buttonView"> View account</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</html>

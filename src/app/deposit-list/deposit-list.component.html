@@ -1,0 +1,24 @@
+<html>
+    <div>
+        <div class = "titleM">Deposit for account {{account.id}}!</div>
+        <div class = "attributes">
+ 
+            <p class = "tab"><b>DEPOSITS</b></p>
+            <table class = "table table-hover width">
+                <thead>
+                <tr>
+                    <th>Deposit</th>
+                    <th>Balance</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor ="let deposit of deposits">
+                    <td>{{deposit.id}}</td>
+                    <td>{{deposit.amountOfMoney}}</td>
+                </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</html>
