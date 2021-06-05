@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class DepositDTO {
 
     private Long id;
-    //private AccountDTO account;
+    private Long accountId;
     private Integer period;
     private Integer amountOfMoney;
 
@@ -27,6 +27,7 @@ public class DepositDTO {
                 .id(deposit.getId())
                 .period(deposit.getPeriod())
                 .amountOfMoney(deposit.getAmount())
+                .accountId(deposit.getAccount().getId())
                 .build();
     }
 

@@ -99,3 +99,15 @@
   margin-top: 2%;
   font-size: 50px;
 }
+
+.button2{
+  display: block;
+  font-size: 24px;
+  width: 200px;
+  border-radius: 10px;
+  border-color: white;
+  margin-left: 2%;
+  margin-top: 2%;
+  color: white;
+  background-color:rgb(0, 0, 0);
+}

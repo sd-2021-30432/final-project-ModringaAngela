@@ -36,4 +36,8 @@ export class ClientComponent implements OnInit {
     this.accountService.seeAccount(account);
   }
 
+  registerBankAccount():void{
+    
+  }
+
 }

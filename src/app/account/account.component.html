@@ -11,17 +11,13 @@
 
         <div class = "operations">
             <p>
-                <button (click) = seeDeposits(account) class = "buttonView">Access Deposits</button>
-            </p>
-            <p>
-                <button (click) = seeDeposits(account) class = "buttonView">See cards associated</button>
-            </p>
-            <p>
-                <button (click) = seeDeposits(account) class = "buttonView">Make a transfer</button>
-            </p>
-            <p>
-                <button (click) = seeDeposits(account) class = "buttonView">Pay bills</button>
+                <button (click) = seeDeposits(account) class = "button2">Deposits</button>
+                <button (click) = seeCards(account) class = "button2">Cards</button>
+                <button (click) = makeTransfer(account) class = "button2">Make a transfer</button>
+                <button (click) = payBill(account) class = "button2">Pay bill</button>
+                <button (click) = createDeposit(account) class= "button2"> Create deposit</button>
             </p>
         </div>
     </div>
+
 </html>

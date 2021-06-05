@@ -18,4 +18,18 @@ export class DepositService {
   public getDepositsByAccountId(id: number): Observable<Deposit[]>{
     return this.http.get<Deposit[]>(this.basicUrl + `/account/${id}/deposits`);
   }
+
+  public createDeposit(amountOfMoney: number, period:number, accountId: number):Observable<any>{
+    const deposit: Deposit = new Deposit();
+    deposit.accountId = accountId;
+    deposit.period = period;
+    deposit.amountOfMoney = amountOfMoney;
+
+    return this.http.post(this.basicUrl + `/create-deposit`, deposit);
+
+  }
+
+  public destroyDeposit(depositId: number):Observable<any>{
+    return this.http.delete(this.basicUrl + `/delete-deposit/${depositId}`);
+  }
 }

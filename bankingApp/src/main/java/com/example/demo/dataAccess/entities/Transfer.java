@@ -13,25 +13,23 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Card {
+public class Transfer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String cardHolderName;
+    private String iban;
 
     @Column
-    private Long cardNumber;
+    private Integer amountOfMoney;
 
-    @Column
-    private Date expirationDate;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn (name = "from_account", referencedColumnName = "id")
+    private Account fromAccount;
 
-    @Column
-    private Long cvv;
-
-    @ManyToOne
-    private Account account;
-
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn (name = "to_account", referencedColumnName = "id")
+    private Account toAccount;
 }

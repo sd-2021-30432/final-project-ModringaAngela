@@ -1,12 +1,12 @@
 package com.example.demo.businessLogic.events.commands;
 
-import com.example.demo.dataAccess.dto.DepositDTO;
+import com.example.demo.dataAccess.dto.CardDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class DestroyDeposit {
+public class RegisterNewCard {
 
-    private Long depositId;
+    CardDTO card;
 }

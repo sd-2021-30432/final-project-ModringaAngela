@@ -18,7 +18,7 @@ export class DepositListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.account = JSON.parse(sessionStorage.getItem('account'));
+    this.account = JSON.parse(localStorage.getItem('account'));
 
     this.route.paramMap.subscribe(()=>{
       this.listDeposits();
@@ -32,5 +32,14 @@ export class DepositListComponent implements OnInit {
         this.deposits = data;
       }
     )
+  }
+
+  destroyDeposit(deposit:Deposit){
+    this.depositService.destroyDeposit(deposit.id).subscribe(
+      data =>{
+        alert("Deposit destroyed");
+      }
+    );
+    window.location.reload();
   }
 }

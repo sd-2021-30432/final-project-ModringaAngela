@@ -1,0 +1,27 @@
+<html>
+    <div>
+        <div class = "titleM">Cards associated with account {{account.id}}!</div>
+        <div class = "attributes">
+ 
+            <table class = "table table-hover width">
+                <thead>
+                <tr>
+                    <th>Card holder name</th>
+                    <th>Card number</th>
+                    <th>Expiration date</th>
+                    <th>cvv</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor ="let card of cards">
+                    <td>{{card.cardHolderName}}</td>
+                    <td>{{card.cardNumber}}</td>
+                    <td>{{card.expirationDate}}</td>
+                    <td>{{card.cvv}}</td>
+                </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</html>

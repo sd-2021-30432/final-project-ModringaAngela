@@ -1,6 +1,7 @@
 package com.example.demo.businessLogic.events.commands;
 
 import com.example.demo.dataAccess.dto.AccountDTO;
+import com.example.demo.dataAccess.dto.TransferDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -8,6 +9,5 @@ import lombok.Data;
 @AllArgsConstructor
 public class TransferMoney {
 
-    private AccountDTO sourceAccount;
-    private AccountDTO destinationAccount;
+    TransferDTO transfer;
 }

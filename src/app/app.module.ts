@@ -12,6 +12,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AccountComponent } from './account/account.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DepositListComponent } from './deposit-list/deposit-list.component';
+import { CreateDepositComponent } from './create-deposit/create-deposit.component';
+import { CardsListComponent } from './cards-list/cards-list.component';
+import { MakeTransferComponent } from './make-transfer/make-transfer.component';
+import { PayBillComponent } from './pay-bill/pay-bill.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { DepositListComponent } from './deposit-list/deposit-list.component';
     ClientComponent,
     AccountComponent,
     DepositListComponent,
+    CreateDepositComponent,
+    CardsListComponent,
+    MakeTransferComponent,
+    PayBillComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +60,21 @@ import { DepositListComponent } from './deposit-list/deposit-list.component';
       {
         path: 'deposits',
         component:DepositListComponent
+      }, 
+      {
+        path: 'cards',
+        component:CardsListComponent   
+      },
+      {
+        path: 'transfer', 
+        component: MakeTransferComponent
+      }, {
+        path: 'pay-bill', 
+        component: PayBillComponent
+      }, 
+      {
+        path: 'create-deposit',
+        component: CreateDepositComponent
       }
     ])
   ],

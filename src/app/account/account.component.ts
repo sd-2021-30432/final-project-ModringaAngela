@@ -15,10 +15,30 @@ export class AccountComponent implements OnInit {
   constructor(private accountService: AccountService, private depositService: DepositService, private router: Router) { }
 
   ngOnInit(): void {
-    this.account = JSON.parse(sessionStorage.getItem('account'));
+    this.account = JSON.parse(localStorage.getItem('account'));
   }
 
   seeDeposits(account: BankAccount):void{
-   this.router.navigate([`/deposits`]);
+    this.router.navigate([`/deposits`]);
+   }
+
+
+  seeCards(account: BankAccount):void{
+   this.router.navigate([`/cards`]);
   }
+
+  makeTransfer(account: BankAccount):void{
+    this.router.navigate([`/transfer`]);
+   }
+
+   payBill(account: BankAccount):void{
+    this.router.navigate([`/pay-bill`]);
+   }
+
+   createDeposit(account: BankAccount):void{
+    this.router.navigate([`/create-deposit`]);
+   }
+
+   
+
 }

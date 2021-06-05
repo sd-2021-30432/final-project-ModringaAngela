@@ -1,10 +1,9 @@
 package com.example.demo.businessLogic.controller;
 
 import com.example.demo.businessLogic.events.commands.CreateDeposit;
-import com.example.demo.businessLogic.events.commands.Login;
+import com.example.demo.businessLogic.events.commands.DestroyDeposit;
 import com.example.demo.businessLogic.events.queries.GetDepositsByAccountId;
 import com.example.demo.businessLogic.handlers.Mediator;
-import com.example.demo.dataAccess.dto.ClientDTO;
 import com.example.demo.dataAccess.dto.DepositDTO;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -34,6 +33,12 @@ public class DepositController {
     public ResponseEntity<List<DepositDTO>> getDepositsByAccountId(@PathVariable Long accountId){
 
         GetDepositsByAccountId event = new GetDepositsByAccountId(accountId);
+        return mediator.handle(event);
+    }
+
+    @DeleteMapping("/delete-deposit/{depositId}")
+    public ResponseEntity<String> destroyDeposit(@PathVariable Long depositId){
+        DestroyDeposit event = new DestroyDeposit(depositId);
         return mediator.handle(event);
     }
 }

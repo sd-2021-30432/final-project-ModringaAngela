@@ -22,6 +22,9 @@ public class Account implements IAccountOperations {
     @Column
     private Integer counter;
 
+    @Column
+    private String iban;
+
     @ManyToOne
     private Bank bank;
 

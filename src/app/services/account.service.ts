@@ -19,7 +19,7 @@ export class AccountService {
   }
 
   public seeAccount(account: BankAccount){
-    sessionStorage.setItem('account', JSON.stringify(account));
+    localStorage.setItem('account', JSON.stringify(account));
     this.router.navigate([`/account/${account.id}`]);
   }
 }

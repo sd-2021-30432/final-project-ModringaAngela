@@ -1,0 +1,78 @@
+<html>
+<h1 class="title1">MAKE A TRANSFER TO ONE OF YOUR ACCOUNTS</h1>
+  <form (ngSubmit)="internalTransfer(transferForm1)" #transferForm1="ngForm" autocomplete="off">
+
+    <div class = "container">
+      <table class = "table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>BANK</th>
+            <th>BALANCE</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor ="let account of accounts">
+            <td>{{account.id}}</td>
+            <td>{{account.bankName}}</td>
+            <td>{{account.balance}}</td>
+          </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <div class="form-group">
+      <input type="text"
+            placeholder="account id"
+            class="textField"
+            id="accoutToId"
+            name="accountToId"
+            required
+            ngModel>
+    </div>
+
+    <div class="form-group">
+      <input
+        type ="text"
+        placeholder="amount of money"
+        class="textField"
+        id="amountOfMoney"
+        name="amountOfMoney"
+        required
+        ngModel>
+    </div>
+
+    <button type="submit" class="buttonLogin butt">Transfer</button>
+
+  </form>
+
+  <p></p>
+  <h1 class="title1">MAKE A TRANSFER TO USING THE IBAN</h1>
+
+  <form (ngSubmit)="externalTransfer(transferForm2)" #transferForm2="ngForm" autocomplete="off">
+
+    <div class="form-group">
+      <input
+        type ="text"
+        placeholder="iban"
+        class="textField"
+        id="iban"
+        name="iban"
+        required
+        ngModel>
+    </div>
+
+    <div class="form-group">
+      <input type="text"
+            placeholder="amount of money"
+            class="textField"
+            id="amountOfMoney"
+            name="amountOfMoney"
+            required
+            ngModel>
+    </div>
+
+    <button type="submit" class="buttonLogin butt">Transfer</button>
+
+  </form>
+</html>

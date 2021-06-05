@@ -23,6 +23,7 @@ public class AccountDTO {
     private String bankName;
     private String type;
     private Long balance;
+    private String iban;
 
     public static List<AccountDTO> fromEntities(List<Account> accounts){
         return accounts.stream()
@@ -33,6 +34,7 @@ public class AccountDTO {
     public static AccountDTO fromEntity(Account account){
         return AccountDTO.builder()
                 .id(account.getId())
+                .iban(account.getIban())
                 .counter(account.getCounter())
                 .bankName(account.getBank().getName())
                 .type(account.getType())
