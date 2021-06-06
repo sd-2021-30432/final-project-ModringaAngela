@@ -1,0 +1,61 @@
+<html>
+<h1 class="title1">SIGN UP</h1>
+  <form (ngSubmit)="createUser(userForm)" #userForm="ngForm" autocomplete="off">
+
+    <div class="form-group">
+      <input type="text"
+            placeholder="First name"
+            class="textField"
+            id="firstName"
+            name="firstName"
+            required
+            ngModel>
+    </div>
+
+    <div class="form-group">
+        <input type="text"
+              placeholder="Last name"
+              class="textField"
+              id="lastName"
+              name="lastName"
+              required
+              ngModel>
+      </div>
+
+    <div class="form-group">
+      <input
+        type ="text"
+        placeholder="username"
+        class="textField"
+        id="username"
+        name="username"
+        required
+        ngModel>
+    </div>
+
+    <div class="form-group">
+        <input
+          type ="password"
+          placeholder="password"
+          class="textField"
+          id="password"
+          name="password"
+          required
+          ngModel>
+      </div>
+
+      <div class="form-group">
+        <input
+        type ="text"
+        placeholder="dob"
+        class="textField"
+        id="dob"
+        name="dob"
+        required
+        ngModel>
+      </div>
+
+    <button type="submit" class="buttonLogin butt">Register</button>
+
+  </form>
+</html>

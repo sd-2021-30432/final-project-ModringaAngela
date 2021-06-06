@@ -1,0 +1,51 @@
+<html>
+<h1 class="title1">REGISTER A NEW ACCOUNT</h1>
+  <form (ngSubmit)="createAccount(accountForm)" #accountForm="ngForm" autocomplete="off">
+
+    <div class="form-group">
+      <input type="text"
+            placeholder="bank name"
+            class="textField"
+            id="bankName"
+            name="bankName"
+            required
+            ngModel>
+    </div>
+
+    <div class="form-group">
+      <input
+        type ="text"
+        placeholder="type"
+        class="textField"
+        id="type"
+        name="type"
+        required
+        ngModel>
+    </div>
+
+    <div class="form-group">
+        <input
+          type ="text"
+          placeholder="balance"
+          class="textField"
+          id="balance"
+          name="balance"
+          required
+          ngModel>
+      </div>
+
+      <div class="form-group">
+        <input
+          type ="text"
+          placeholder="iban"
+          class="textField"
+          id="iban"
+          name="iban"
+          required
+          ngModel>
+      </div>
+
+    <button type="submit" class="buttonLogin butt">Register</button>
+
+  </form>
+</html>
